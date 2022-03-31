@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// import Drawer from "./components/drawer";
+import Dashboard from "./pages/Dashboard/dashboard.component";
+import Login from "./auth/login/login.component";
+import Register from "./auth/register/register.component";
+import StockDetail from './pages/StockDetail/stockdetail.component'
+import { Routes, Route } from 'react-router-dom';
+import Buy from "./pages/Buy/Buy";
+import Sell from "./pages/Sell/Sell";
+import AppbarComp from "./components/AppBar/appBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppbarComp />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/:code/:id" element={<StockDetail />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/buy" element={<Buy />} />
+        <Route path="/sell" element={<Sell />} />
+      </Routes>
     </div>
   );
 }

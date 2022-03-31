@@ -1,0 +1,11 @@
+.table-header {
+    color: lightGrey !important;
+    font-weight: bold !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .table-header, .table-body, .table-total{
+        font-size: 14px !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+}

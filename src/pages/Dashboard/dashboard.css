@@ -1,0 +1,26 @@
+.dashboard-container {
+   color: #fff;
+   background-color: #F8FAFB;
+}
+
+.stock-btn {
+    color: black;
+}
+
+.special-btn {
+    background-color:#4F38F7;
+    border-radius: 10px;
+    color: white;
+}
+
+.common-btn {
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 500px) {
+    .direct-btns{
+        font-size: 12px;
+    }
+}

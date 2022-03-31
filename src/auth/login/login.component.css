@@ -1,0 +1,37 @@
+.login-container{
+    background-color: #4F38F7;
+    height: 100vh;
+}
+
+.login-btn {
+    background-color: #4F38F7;
+}
+
+.input-field {
+  height: 50px;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+}
+
+.link-tag {
+  text-decoration: none;
+}
+
+/* ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  :-moz-placeholder {
+    text-align: center;
+  } */
+
+
+  @media only screen and (max-width: 500px) {
+    .span-signup {      font-size: 13px;    }
+
+    .login-btn {      font-size: 14px;    }
+
+    .input-field {      height: 40px !important;    }
+
+    .span-error {      font-size: 12px !important;    }
+  }

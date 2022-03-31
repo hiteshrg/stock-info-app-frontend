@@ -1,0 +1,16 @@
+.buy-container {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.buy-box {
+    padding: 1rem;
+}
+
+.input-field {
+    height: 50px;
+    background-color: #F4F4F4;
+    border: none;
+    border-radius: 10px;
+  }
