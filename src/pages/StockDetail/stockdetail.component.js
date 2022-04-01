@@ -32,11 +32,12 @@ const TableContent = (props) => {
                         )
                     })}
 
-                    <tr className="text-bold">
-                        <td><b>Total</b></td>
-                        <td></td>
-                        <td style={{ textAlign: "right" }}><b>{total && total.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</b></td>
-                    </tr>
+                    {total &&
+                        <tr className="text-bold">
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td style={{ textAlign: "right" }}><b>{Number(total).toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</b></td>
+                        </tr>}
                 </tbody>
             </table>
         </div>

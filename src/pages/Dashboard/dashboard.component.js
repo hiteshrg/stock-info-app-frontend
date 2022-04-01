@@ -11,9 +11,11 @@ import Spinner from './../../components/Spinner/Spinner'
 
 const Dashboard = (props) => {
     const navigate = useNavigate();
+    const user = JSON.parse(localStorage.getItem('userInfo'));
     let [apiData, setApiData] = useState([]);
     let [liveData, setLiveData] = useState({});
     const [isLoading, setIsLoading] = useState(false);
+    const [userId, setUserId] = useState(user.userId);
 
     // get live stock price and 52WeeksHigh and 52WeeksLow data
     // const getLiveData = async (params) => {
@@ -71,7 +73,7 @@ const Dashboard = (props) => {
                 //         getLiveData(searchCode);
                 //         props.setStockData(res.data.data);
                 //     }).catch((err) => console.error('Catch Error :', err));
-                axios({ method: 'GET', url: 'http://localhost:8080/stock/get-all-purchased-stock' })
+                axios({ method: 'POST', url: 'http://localhost:8080/stock/get-all-purchased-stock', data: { "userId": userId } })
                     .then((res) => {
                         setIsLoading(false);
                         setApiData(res.data.data);
